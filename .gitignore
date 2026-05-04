@@ -1,0 +1,42 @@
+# ── Large data files (too large for GitHub) ─────────────────────────────────
+data/fulltext/
+data/fulltext_stoploss/
+data/screening_results.jsonl
+data/*.jsonl
+data/*.tsv
+data/*.log
+data/*.txt
+data/*.json
+
+# Keep outputs
+!data/outputs/
+
+# ── Cache & logs ─────────────────────────────────────────────────────────────
+cache_litvar/
+cache_pubmed/
+cache_pubtator/
+cache_pubtator_search/
+logs/
+results/
+export/
+export_v2/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.log
+cookies.txt
+sample_review.*
+
+# Archive (old scripts, not needed on GitHub)
+archive/
+
+# Old data files in data/ root
+data/*.xlsx
+data/*.py
+data/tdm_requests/
