@@ -101,3 +101,49 @@ conda activate gof_pipeline
 
 Raw data (full-text corpus, screening results) is not included due to size (~1.3 GB).  
 Final annotated outputs are in `data/outputs/`.
+
+---
+
+## 📊 데이터 파일 가이드
+
+### 빠른 확인 방법
+
+**추천 순서:**
+1. `Quick_View` 시트 - 핵심 정보만 (10개 컬럼)
+2. `Summary` 시트 - 전체 통계
+3. `FRAMESHIFT_GOF_core` 시트 - 주요 결과 (1,627개)
+4. `All_variants` 시트 - 전체 상세 데이터 (2,566개, 60개 컬럼)
+
+### 시트 설명
+
+| 시트명 | 행 수 | 설명 |
+|--------|-------|------|
+| Quick_View | 2,566 | 핵심 컬럼만 (교수님 확인용) |
+| Summary | 30 | 전체 통계 요약 |
+| All_variants | 2,566 | 전체 변이 (모든 분석 컬럼) |
+| FRAMESHIFT_GOF_core | 1,627 | Frameshift GOF core dataset |
+| STOP_GAIN_GOF_core | 476 | Stop-gain GOF core dataset |
+| STOP_LOSS_GOF_core | 28 | Stop-loss GOF core dataset |
+
+### Quick_View 컬럼 설명
+
+- `gene`: 유전자명
+- `hgvs_coding`: cDNA 변이 표기 (예: c.1201_1202delAA)
+- `hgvs_protein`: 단백질 변이 표기 (예: p.Lys401Glufs*10)
+- `primary_gof_task`: 변이 유형 (FRAMESHIFT_GOF/STOP_GAIN_GOF/STOP_LOSS_GOF)
+- `hn_call`: H(hypermorph)/N(neomorph) 분류
+- `evidence_strength`: 증거 강도 (STRONG_ASSERTION/MODERATE/WEAK)
+- `pmid`: PubMed ID
+- `disease`: 질환명
+- `curated_mechanism_class`: 큐레이션된 메커니즘
+- `strict_gof_status`: Strict GOF 여부
+
+### 컬럼이 많은 이유
+
+All_variants 시트는 전체 분석 파이프라인의 모든 단계를 포함:
+- QC (quality control)
+- Curation (수동 검토)
+- Annotation (게놈 좌표, OMIM 등)
+- Classification (H/N, task 분류)
+
+일반적인 검토에는 Quick_View나 core 시트들을 사용하시면 됩니다.
