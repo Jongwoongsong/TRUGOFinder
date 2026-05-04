@@ -118,7 +118,7 @@ Final annotated outputs are in `data/outputs/`.
 
 | 시트명 | 행 수 | 설명 |
 |--------|-------|------|
-| Quick_View | 2,566 | 핵심 컬럼만 (교수님 확인용) |
+| Quick_View | 2,566 | 핵심 컬럼만 |
 | Summary | 30 | 전체 통계 요약 |
 | All_variants | 2,566 | 전체 변이 (모든 분석 컬럼) |
 | FRAMESHIFT_GOF_core | 1,627 | Frameshift GOF core dataset |
